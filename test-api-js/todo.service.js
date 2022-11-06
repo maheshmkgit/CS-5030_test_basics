@@ -22,14 +22,17 @@ class todoservice{
         return this.todos;
     }
 
+    //POST
     add_todo(todo){
         // Your code here
     }
 
+    //DELETE
     delete_todo(id){
         // Your code here
     }
 
+    //UPDATE
     update_todo(id, todo){
         // Your code here
     }
