@@ -1,16 +1,16 @@
 class todoservice{
     todo_data = {
         "todo":[{
-            "title": "T1",
-            "description": "D1",
+            "title": "milk",
+            "description": "get 2 bottles of milk from schnucks",
             "done": false
         },{
-            "title": "T2",
-            "description": "D2",
+            "title": "matress",
+            "description": "bring a bed from walmart on the way back home",
             "done": false
         },{
-            "title": "T3",
-            "description": "D3",
+            "title": "movie",
+            "description": "book movie tickets for this weekend",
             "done": false
         }]
     }
