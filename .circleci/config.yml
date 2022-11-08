@@ -37,8 +37,9 @@ workflows:
   sample:
     jobs:
     # https: //discuss.circleci.com/t/trigger-build-when-we-push-on-only-particular-branch/32169
-      - build-and-test-python
-        branches:
-          only:
-            - master
+      - build-and-test-python:
+          filters:
+            branches:
+              only:
+                - master
       - build-and-test-javascript
