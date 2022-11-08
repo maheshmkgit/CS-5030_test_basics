@@ -15,4 +15,13 @@ describe("todo api test suite", () => {
                         return done();
                     })
 });
+    test("DELETE /", (done)=>{
+        request(app).delete("/deleteToDo/:id")
+                    .expect((response.body.todo.length).toBe(2))
+                    .expect(200)
+                    .end((err, res)=>{
+                        if(err) return done(err)
+                        return done();
+                    })
+    })
 });

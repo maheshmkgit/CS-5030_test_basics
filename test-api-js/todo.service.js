@@ -41,6 +41,8 @@ class todoservice{
     //DELETE
     delete_todo(id){
         // Your code here
+        this.todos.todo.splice(this.todo_data.todo.indexOf({"id": request.params.id}),1)
+        return this.todos;
     }
 
     //UPDATE
