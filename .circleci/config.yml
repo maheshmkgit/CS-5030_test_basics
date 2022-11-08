@@ -24,12 +24,22 @@ jobs:
        - run:
            name: install dependencies
            command: cd test_javascript && npm install
-      
        - run:
            name: run tests
            command: cd test_javascript && npm run test
+       - run:
+           name: install dependencies of test-api-js
+           command: cd test-api-js && npm install
+       - run:
+           name: run new test cases
+           command: cd test-api-js && npm run test
 workflows:
   sample:
     jobs:
-      - build-and-test-python
+    # https: //discuss.circleci.com/t/trigger-build-when-we-push-on-only-particular-branch/32169
+      - build-and-test-python:
+          filters:
+            branches:
+              only:
+                - master
       - build-and-test-javascript

@@ -4,10 +4,10 @@ var app = express();
 app.use(express.json());
 var todoservice =require('./todo.service.js');
 
-app.get('/todolist', function (req, res) {
-  // console.log('API called with GET:' + req.url);
+app.get('/todolist', function (request, response) {
+  // console.log('API called with GET:' + request.url);
   let todo_service = new todoservice();
-  res.json(todo_service.get_todos());
+  response.json(todo_service.get_todos());
 })
 
 app.post('/addToDo', function(request, response) {
