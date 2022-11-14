@@ -1,16 +1,16 @@
 class todoservice{
     todo_data = {
         "todo":[{
-            "title": "T1",
-            "description": "D1",
+            "title": "milk",
+            "description": "get 2 bottles of milk from schnucks",
             "done": false
         },{
-            "title": "T1",
-            "description": "D1",
+            "title": "matress",
+            "description": "bring a bed from walmart on the way back home",
             "done": false
         },{
-            "title": "T1",
-            "description": "D1",
+            "title": "movie",
+            "description": "book movie tickets for this weekend",
             "done": false
         }]
     }
@@ -22,19 +22,17 @@ class todoservice{
         return this.todos;
     }
 
-    //POST
     add_todo(todo){
-        // Your code here
+        this.todos.todo.push(todo);
+             
     }
 
-    //DELETE
     delete_todo(id){
-        // Your code here
+        delete this.todos.todo[0]        
     }
 
-    //UPDATE
     update_todo(id, todo){
-        // Your code here
+        this.todos.todo[id]= todo;        
     }
 }
 
